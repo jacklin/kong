@@ -18,6 +18,7 @@ KONG_ADMIN_LISTEN='0.0.0.0:8001, 0.0.0.0:8444 ssl'
 
 COPY ./conf/kong.yml /usr/local/kong/declarative/
 COPY ./conf/custom_nginx.template /usr/local/kong/
+COPY ./conf/kong.conf /etc/kong/
 COPY ./conf/bin/ /opt/docker/bin/
 
 CMD [ "/bin/sh", "/opt/docker/bin/entrypoint.sh" ]
